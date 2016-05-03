@@ -1,0 +1,1 @@
+MAMP Scaffolding for homepage
