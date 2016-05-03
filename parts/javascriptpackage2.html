@@ -1,0 +1,78 @@
+<script src="external-library/jquery-2.1.0/jquery-2.1.0.min.js"></script>
+
+<!-- FLOT Charts Plug in -->
+<script language="javascript" type="text/javascript" src="/external-library/flot-0.8.3/jquery.flot.js"></script>
+<script language="javascript" type="text/javascript" src="/external-library/flot-0.8.3/jquery.flot.pie.js"></script>
+
+<script>
+	function labelFormatter(label, series) {
+		return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%<br/>" + series.data[0][1] + "</div>";
+	}
+	
+	/*
+	var data = [
+		{ label: "Homo sapiens",  data: 25399, color: '#F7464A', url: '#1'},
+		{ label: "Escherchia coli",  data: 4818, color: '#E2EAE9', url: '#2'},
+		{ label: "Mus musculus",  data: 4296, color: '#D4CCC5', url: '#3'},
+		{ label: "Saccharomyces cerevisiae",  data: 2305, color: '#949FB1', url: '#4'},
+		{ label: "Bos taurus",  data: 2297, color: '#E0E4CC', url: '#5'},
+		{ label: "Rattus norvegicus",  data: 2108, color: '#69D2E7', url: '#6'},
+		{ label: "Escherichia coli K-12",  data: 1898, color: '#666666', url: '#7'},
+		{ label: "Other",  data: 54414, color: '#4D5360', url: '#8'}
+	];
+	*/
+	
+	var data2 = [
+		{ label: 'Eukaryota', data: 50835, color: '#AEC68A', url: '/pdb/search/smart.do?smartSearchSubtype_0=TreeQueryExpression_1&t_0=1&n_0=%2B2759~&smartComparator=and&refine=true'},
+		{ label: 'Bacteria', data: 36493, color: '#9E6F53', url: '/pdb/search/smart.do?smartSearchSubtype_0=TreeQueryExpression_1&t_0=1&n_0=%2B2~&smartComparator=and&refine=true'},
+		{ label: 'Viruses', data: 6619, color: '#C26E60', url: '/pdb/search/smart.do?smartSearchSubtype_0=TreeQueryExpression_1&t_0=1&n_0=%2B10239~&smartComparator=and&refine=true'},
+		{ label: 'Archaea', data: 3679, color: '#01C08F', url: '/pdb/search/smart.do?smartSearchSubtype_0=TreeQueryExpression_1&t_0=1&n_0=%2B2157~&smartComparator=and&refine=true'},
+		{ label: 'Unassigned', data: 2867, color: '#060407', url: '/pdb/search/smart.do?smartSearchSubtype_0=TreeQueryExpression_1&t_0=1&n_0=0&smartComparator=and&refine=true'},
+		{ label: 'Other', data: 797, color: '#F1B296', url: '/pdb/search/smart.do?smartSearchSubtype_0=TreeQueryExpression_1&t_0=1&n_0=%2B28384~%2B12908~&smartComparator=and&refine=true'}
+	];
+	
+	/*
+	var data3 = [
+		{ label: 'X-ray', data: 87755, color: '#AEC68A', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=X-RAY&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},
+		{ label: 'Solution NMR', data: 10316, color: '#9E6F53', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=SOLUTION NMR&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},
+		{ label: 'Electron Microscopy', data: 740, color: '#C26E60', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=ELECTRON MICROSCOPY&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},
+		{ label: 'Solid-State NMR', data: 68, color: '#01C08F', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=SOLID-STATE NMR&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},{ label: 'Hybrid', data: 65, color: '#060407', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=HYBRID&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},
+		{ label: 'Neutron Diffraction', data: 44, color: '#F1B296', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=NEUTRON DIFFRACTION&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},
+		{ label: 'Electron Crystallography', data: 40, color: '#86D1BA', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=ELECTRON CRYSTALLOGRAPHY&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},
+		{ label: 'Fiber Diffraction', data: 38, color: '#969FA6', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=FIBER DIFFRACTION&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},
+		{ label: 'Solution Scattering', data: 32, color: '#F2F2F2', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=SOLUTION SCATTERING&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'},
+		{ label: 'Other', data: 24, color: 'undefined', url: '/pdb/search/smart.do?smartSearchSubtype_0=ExpTypeQuery&mvStructure.expMethod.value_0=OTHER&mvStructure.hasExperimentalData.value_0=&mvStructure.expMethod.exclusive_0=y&smartComparator=and&refine=true'}
+	];
+	*/
+		
+	var options = {
+		series: { 
+			pie: { 
+				show: true,
+			} 
+		}
+	}
+	
+	/*
+	for (var i=0;i<data.length;i++){
+        //put the data value into the label
+		data[i].label = '<a href=\"rcsb.org?' + data[i].url + '\">' + data[i].label + ' ('+data[i].data+')</a>';
+    }
+	*/
+
+	for (var i=0;i<data2.length;i++){
+        //put the data value into the label
+		data2[i].label = '<a href=\"rcsb.org?' + data2[i].url + '\">' + data2[i].label + ' ('+data2[i].data+')</a>';
+    }
+
+	/*
+	for (var i=0;i<data3.length;i++){
+        //put the data value into the label
+		data3[i].label = '<a href=\"rcsb.org?' + data3[i].url + '\">' + data3[i].label + ' ('+data3[i].data+')</a>';
+    }
+*/
+	
+	$.plot('#placeholder', data2, options);
+	// $.plot('#placeholder_1', data2, options);
+	// $.plot('#placeholder_2', data3, options);
+</script>

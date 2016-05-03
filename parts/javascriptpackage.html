@@ -1,0 +1,60 @@
+<script src="external-library/jquery-2.1.0/jquery-2.1.0.min.js"></script>
+<script src="external-library/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+<script src="js/bootstrap-addons/jasny-bootstrap.min.js"></script>
+
+<script src="js/NavbarControl.js"></script>
+
+<script>
+	// Remove Auto Slide for Carousel
+	$('.carousel').carousel({
+	    interval: false
+	})
+	
+	// $("#deposit-nav").show();
+</script>
+
+<!-- PURPOSE: Bootstrap support older browsers: IE8 -->
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+<!-- Insert Google Analytics -->
+
+<!-- FLOT Charts Plug in -->
+<script language="javascript" type="text/javascript" src="/external-library/flot-0.8.3/jquery.flot.js"></script>
+<script language="javascript" type="text/javascript" src="/external-library/flot-0.8.3/jquery.flot.pie.js"></script>
+
+<script>
+	function labelFormatter(label, series) {
+		return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%<br/>" + series.data[0][1] + "</div>";
+	}
+	
+	var data = [
+		{ label: "Homo sapiens",  data: 25399, color: '#F7464A', url: '#1'},
+		{ label: "Escherchia coli",  data: 4818, color: '#E2EAE9', url: '#2'},
+		{ label: "Mus musculus",  data: 4296, color: '#D4CCC5', url: '#3'},
+		{ label: "Saccharomyces cerevisiae",  data: 2305, color: '#949FB1', url: '#4'},
+		{ label: "Bos taurus",  data: 2297, color: '#E0E4CC', url: '#5'},
+		{ label: "Rattus norvegicus",  data: 2108, color: '#69D2E7', url: '#6'},
+		{ label: "Escherichia coli K-12",  data: 1898, color: '#666666', url: '#7'},
+		{ label: "Other",  data: 54414, color: '#4D5360', url: '#8'}
+	];
+		
+	var options = {
+		series: { 
+			pie: { 
+				show: true,
+			} 
+		}
+	}
+	
+	for (var i=0;i<data.length;i++){
+        //put the data value into the label
+		//data[i].label = data[i].label + ' ('+data[i].data+')';
+		data[i].label = '<a href=\"rcsb.org?' + data[i].url + '\">' + data[i].label + ' ('+data[i].data+')</a>';
+		/* console.log(data[i].label); */
+    }
+	
+	$.plot('#placeholder', data, options);
+</script>

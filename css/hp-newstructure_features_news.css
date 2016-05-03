@@ -1,0 +1,262 @@
+/* COMMON FORMATTING FOR THE MIDDLE SECTION */
+#middlesection {
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+/* Set the gutter in the middlesection */
+#middlesection #lateststructure,
+#middlesection #newfeatures,
+#middlesection #news {
+	padding: 0;
+}
+
+#middlesection #lateststructure {
+	padding-right: 5px;
+}
+
+#middlesection #newfeatures {
+	padding: 0 5px;
+}
+
+#middlesection #news {
+	padding-left: 5px;
+}
+
+/* Set the background color of the panel */
+#middlesection .panel-default>.panel-heading {
+	background-color: #88A1C2;
+	color: #FFF;
+}
+
+/* Set the common format */
+#middlesection ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#middlesection p {
+	font-size: 12px;
+}
+
+#middlesection h3 {
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 5px;
+	margin-top: 0;
+}
+
+#middlesection .date {
+	font-size: 12px;
+	font-style:italic;
+	margin-bottom: 0;
+}
+
+/* Set the tab section */
+.tab-content {
+	padding: 15px;
+}
+
+.nav-tabs {
+	border-bottom: 0;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	background-color: #88A1C2;
+	border: 1px solid #88A1C2;
+	color: #FFFFFF;
+}
+
+.nav-tabs .open>a, .nav-tabs .open>a:hover, .nav-tabs .open>a:focus, .nav-tabs>li>a:hover {
+	border: 1px solid #DDD;
+	background-color: #A3B6CA;
+	color: #FFFFFF;
+}
+
+/* FIRST COLUMN: LATEST ENTRIES */
+#lateststructure .panel-body {
+	padding: 10px;
+}
+
+#lateststructure .panel-heading {
+	height: 45px;
+}
+
+#lateststructure .panel-heading h3 {
+	display: block;
+	float: left;
+}
+
+#lateststructure .date {
+	display: block;
+	float: right;
+	margin-top: 3px;
+}
+
+#lateststructure #carousel-lateststructure {
+	margin-top: 3px;
+}
+
+/* Carousel Left/Right Arrow Controls */
+.carousel-control.right,
+.carousel-control.left {
+	background-image: none;
+}
+
+.carousel-control {
+	width: 5%;
+}
+
+.glyphicon-chevron-right, 
+.glyphicon-chevron-left {
+	color: black;
+}
+
+/* Carousel Bottom Indicators */
+#lateststructure .carousel-indicators {
+	margin-bottom: 0;
+}
+
+#lateststructure .carousel-indicators li {
+	background-color: #ddd;
+}
+
+#lateststructure .carousel-indicators .active {
+	background-color: #666666;
+}
+
+#lateststructure .carousel-inner {
+	width: 92%;
+	height: 280px;
+	margin: 0;
+}
+
+#lateststructure .item {
+	margin-top: 45px;
+}
+
+#lateststructure img {
+	float: left;
+	margin: 0 5px;
+	width: 45%;
+}
+
+#lateststructure hr {
+	margin: 2px 0 1px 0;
+}
+
+#lateststructure h4 {
+	font-size: 15px;
+}
+
+/* COMMON FORMATTING FOR LIST CONTENT */
+.default-content-list h4 {
+	margin-bottom: 3px;
+	font-size: 15px;
+	margin-top: 0;
+}
+
+.default-content-list li {
+	clear: both;
+	padding: 5px 0;
+}
+
+.default-content-list li img {
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+}
+
+/* SECOND COLUMN: NEW FEATURES */
+#newfeatures .panel-body {
+	height: 303px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: block;
+}
+
+#newfeatures_content h4 {
+	margin-top: 5px;
+}
+
+#newfeatures_content img {
+	width: 120px;
+	margin-right: 0;
+	margin-top: 0;
+}
+
+/* THIRD COLUMN: TWITTER NEWS */
+/* Close the gap between tabs and content */
+#news .nav-tabs>li {
+	margin-bottom: -1px;
+}
+
+#news_content {
+	padding: 0;
+	border: 0;
+}
+
+#rcsbnews {
+	position: relative;
+}
+
+#rcsbnews a {
+	font-size: 12px;
+}
+
+#rcsbnews #weeklyRCSBnews {
+	height: 205px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: block;
+	border: 5px solid #88A1C2;
+	padding: 15px;
+}
+
+#rcsbnews #wwPDBnews {
+	height: 100px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: block;
+	border: 5px solid #8DBD8D;
+	padding: 15px;
+}
+
+#rcsbnews #wwPDBnews .logo {
+	width: 100px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+/* wwPDB news anchor colors */
+#rcsbnews #wwPDBnews a {
+	color: #0B810B;
+}
+
+#rcsbnews #wwPDBnews .top_wwpdbnews a {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#rcsbnews #wwPDBnews .date {
+	font-weight: normal;
+}
+
+/* THIRD COLUMN: PUBLICATIONS */
+#news_content .feature_block img {
+	width: 43%;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#featuredsystems,
+#moleculeofthemonth,
+#quarterlynews,
+#annualreport {
+	border: 5px solid #88A1C2;
+	padding: 10px;
+	height: 305px;
+	margin-top: -3px;
+}

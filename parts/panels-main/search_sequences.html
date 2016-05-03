@@ -1,0 +1,38 @@
+<!-- PANEL Search > Sequence -->
+<div id="search_sequences_panel" class="panel_detailcontent">
+	<h3>Search by Sequences</h3>
+	<p>Searches protein and nucleic acid sequences using the BLAST or FASTA method. <a href="#">Read more</a></p>
+	<form id="Sequence_SearchForm" class="panel_form single_form" role="form">
+		<div class="row">
+			<div class="form-group col-xs-4">
+			    <label for="InputStructuralID">Structural ID</label>
+			    <input type="structuralid" class="form-control" id="InputStructuralID" placeholder="Enter Structural ID">
+			</div>
+			<div class="form-group col-xs-4">
+			    <label for="InputChainID">Chain ID</label>
+			    <input type="chainid" class="form-control" id="InputChainID" placeholder="Chain ID">
+			</div>
+			<div class="col-xs-3">
+				<label for="SelectSearchTool">Search Tool</label>
+				<select class="form-control" id="SelectSearchTool">
+					<option>BLAST</option>
+					<option>FASTA</option>
+					<option>PSI-BLAST</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-11">
+				<label for="InputSequence">Sequence</label>
+			    <textarea class="form-control" rows="3" id="InputSequence" placeholder="Enter Sequence"></textarea>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-xs-3">
+				<button type="button" class="btn btn-primary">Submit Sequence Query</button>
+			</div>	
+		</div>				
+	</form>
+	<p class="notes">NOTE: E-value cutoff set to '10.0'. Sequence Identity Cutoff set to 0%. Active - Mask Low Complexity.</p>
+	<div class="clearfix"></div>
+</div>

@@ -1,0 +1,370 @@
+/* --------- PANEL : BOUNDARY, COMMON FORMATING --------- */
+#panel {
+	border: 1px solid #666666;
+	position: relative;
+}
+
+#panel img {
+	margin: 10px;
+	border: 1px solid #e5e5e5;
+}
+
+/* Example Images */
+#panel .example_images img {
+	width: 175px;
+	margin: 5px;
+}
+
+/* Centering the Block */
+#panel .centering_block {
+	text-align: center;
+}
+
+#panel_toggle-content .primary-panel {
+	
+}
+
+#panel .panel_content p {
+	font-size: 12px;
+	margin: 10px 0;
+}
+
+#panel .panel_content label {
+	color: #575757;
+	font-weight: normal;
+	margin-right: 10px;
+}
+
+#panel .panel_content .notes {
+	font-size: 12px;
+	color: #BEC4C5;
+	font-style: italic;
+}
+
+.panel_content .panel_form {
+	margin-left: 20px;
+	border: 1px solid #ADAFAF;
+	padding: 15px 20px;
+}
+
+.panel_content .single_form {
+	border: 0;
+	margin-left: 0;
+	margin-top: 0;
+	padding-top: 10px;
+}
+
+.panel_content .single_form textarea {
+	resize: none; 
+}
+
+/* LEARN PANEL - Structural View, Molecule of the Month */
+#panel .panel_content ul {
+	list-style-type: none;
+	margin: 0;
+	margin-bottom: 10px;
+	padding-left: 0;
+	font-size: 12px;
+}
+
+#panel .panel_content .list-content {
+	list-style-type: disc;
+	padding-left: 20px;
+}
+
+#panel .panel_content .list-icons {
+	margin-right: 10px;
+}
+
+#panel .panel_content .list-icons li {
+	display: inline;
+}
+
+#panel .panel_content .list-icons li img {
+	margin: 0;
+	width: 130px;
+}
+
+#panel .panel_content #deposition_sitescreenshot li {	
+}
+
+#panel .panel_content #deposition_sitescreenshot li img {
+	vertical-align:text-bottom;
+	border: 3px solid #e7ebec;
+	width: 33%;
+}
+
+/* --------- PANEL : MAIN NAVIGATION --------- */
+#panel_mainnav {
+	padding: 10px 0;
+	background-color: #254669;
+	float: left;
+	height: 425px;
+	display: block;
+	transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
+}
+
+#panel_mainnav ul {
+	color: #FFFFFF;
+	padding-left: 1px;
+	padding-top: 15px;
+	list-style-type: none;
+}
+
+#panel_mainnav ul li {
+	padding: 14px 20px;
+	font-size: 19px;
+	font-weight: 300;
+}
+
+#panel_mainnav ul li:hover {
+	background-color: #18385A;
+}
+
+#panel_mainnav ul li a,
+#panel_mainnav ul li a:hover {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+
+#panel_mainnav ul .active,
+#panel_mainnav ul .active:hover {
+	background-color: #FFFFFF;
+}
+
+#panel_mainnav ul .active a,
+#panel_mainnav ul .active a:hover {
+	color: #7eacd2;
+}
+
+#panel_mainnav ul li .glyphicon {
+	padding: 0 5px;
+}
+
+/* --------- PANEL : SUBMENU NAVIGATION --------- */
+#panel_subnav {
+	padding: 0;
+}
+
+#panel_subnav ul {
+	padding: 10px 0;
+	margin-left: 0;
+	width: 100%;
+	height: 425px;
+	background: #FFFFFF;
+	color: #666666;
+	border-right: 1px solid #e7ebec;
+	list-style-type: none;
+	float: left;
+	display: block;
+	margin-bottom: 0;
+}
+
+#panel_subnav ul li {
+	padding: 5px 0 5px 15px;
+	font-size: 14px;
+}
+
+#panel_subnav ul li h4 {
+	color: #3f4951;
+	font-size: 15px;
+	margin: 5px 0 0 0;
+}
+
+#panel_subnav ul li a,
+#panel_subnav ul li:hover a {
+	text-decoration: none;
+	display: block;
+	color: #666666;
+}
+
+#panel_subnav ul li:hover {
+	background-color: #D2D4D5;
+}
+
+#panel_subnav ul .active,
+#panel_subnav ul .active:hover {
+	background-color: #e7ebec;
+}
+
+#panel_subnav ul .header:hover {
+	background-color: #ffffff;
+}
+
+#panel_subnav ul .divider,
+#panel_subnav ul .divider:hover {
+	background-color: #e5e5e5;
+	height: 1px;
+	margin: 3px 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+/* For PDB101 logo */
+#panel #panel_subnav ul .image_submenu {
+	margin: 0;
+	width: 80%;
+}
+
+/* LEARN PANEL - Molecule of the Month*/
+.panel_content #Select_MotM {
+	position: relative;
+    z-index:1;
+	background-color: #E3E6E7;
+	overflow:hidden;
+	margin-left: 0;
+	margin: 10px 0;
+	padding: 20px 40px;
+}
+
+#Select_MotM:before{
+    z-index:-1;
+    position:absolute;
+    left:0;
+    top:0;
+    content: url(/images/pdb101/MotM_Collage.png);
+    opacity:0.3;
+    -webkit-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+
+#Select_MotM #motm_dropdown {
+	height: 286px;
+}
+
+/* LEARN PANEL - Structural Biology */
+#panel .panel_content #structuralviewicons {
+	display: block;
+	text-align: center;
+}
+
+/* LEARN PANEL - Education Resources */
+#panel .panel_content #educationresourcelist li {
+	width: 340px;
+	float: left;
+	display: block;
+	margin-right: 10px;
+	clear: none;
+}
+
+#panel .panel_content #educationresourcelist img {
+	float: left; 
+	margin-right: 10px;
+	margin-bottom: 5px;
+	width: 90px;
+}
+
+/* Single Image for panels */
+.panel-single-image {
+	width: 48%;
+}
+
+.panel-single-image-longwidth {
+	width: 60%;
+}
+
+.panel-single-image-longheight {
+	width: 40%;
+}
+
+#panel .image-bordered {
+	border: 5px solid #E5E5E5;
+}
+
+#learn_molecule ul {
+	list-style-type: disc;
+}
+
+/* WELCOME PANEL */
+#welcome_rcsb_panel div h3 {
+	margin-top: 5px;
+}
+
+/* Reset the border color */
+#panel .col-md-10 {
+	border-color: #FFFFFF;
+}
+
+/* VIDEO CHALLENGE PAGE: Video to fit panel */
+#learn_videochallenge .video-container {
+	padding-bottom: 48.5%;
+	padding-top: 0;
+}
+
+#learn_videochallenge table {
+	font-size: 12px;
+}
+
+/* SEARCH PANEL */
+.panel_content {
+	display: block;
+	float: left;
+	border: 15px solid #e7ebec;
+/*	height: 425px;*/
+}
+
+#search_drilldown .emphasis,
+#drilldown_results .emphasis {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#DrillDown_Form {
+	border: 0;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#DrillDown_Form #drilldown_options {
+	margin: 0;
+	padding: 0;
+	width: 41%;
+	float: left;
+	display: block;
+}
+
+#DrillDown_Form #drilldown_options li {
+	display: inline-block;
+	width: 49%;
+	margin: 3px 0;
+	font-size: 12px;
+}
+
+#DrillDown_Form #drilldown_options li img {
+	margin: 0;
+	padding: 0;
+	margin-right: 5px;
+	float: left;
+	width: 35px;
+}
+
+#DrillDown_Form #drilldown_options li span {
+	
+}
+
+#DrillDown_Form #drilldown_results {
+	float: left;
+	width: 58%;
+	display: block;
+	padding: 15px 10px;
+	border: 2px solid #e7ebec;
+}
+
+#DrillDown_Form #drilldown_results ul {
+	padding: 0;
+}
+
+
+#placeholder {
+	width: 100%;
+	height: 175px;
+}
+
+.legendColorBox {
+	padding-right: 3px;
+}

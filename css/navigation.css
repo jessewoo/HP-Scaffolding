@@ -1,0 +1,9 @@
+.dropdown-menu>div {
+	padding: 3px 20px;
+}
+
+.main-header {
+	font-weight: bold;
+	padding-top: 30px;
+	font-size: 16px;
+}

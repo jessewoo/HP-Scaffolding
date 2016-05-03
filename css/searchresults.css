@@ -1,0 +1,107 @@
+#refiningSearchForm {
+	margin-bottom: 30px;
+}
+
+#refinedsearch h4,
+#searchresults h4 {
+	border-bottom: 1px solid #ADB2B4;
+	padding-bottom: 5px;
+	color: #db4209;
+}
+
+#refinedsearch ul {
+	list-style-type: none;
+	padding-left: 1px;
+	margin-top: 15px;
+}
+
+#refinedsearch ul li {
+	margin: 15px 0;
+	color: #666666;
+	font-size: 12px;
+}
+
+#refinedsearch ul img {
+	width: 30px;
+	margin-right: 5px;
+}
+
+#refinedsearch ul li select {
+	width: 170px;
+	display: inline-block;
+	float: right;
+}
+
+#refinedsearch ul li #xrayRange {
+	width: 170px;
+}
+
+#refinedsearch .slider {
+	float: right;	
+}
+
+.searchparameter {
+	color: #db4209;
+}
+
+.DateSelection {
+	float: right;
+	display: inline-block;
+}
+
+.DateSelection input {
+	width: 80px;
+	display: inline-block;
+}
+
+#searchsuggestions ul {
+	border: 0;
+	padding: 0 10px;
+}
+
+#searchsuggestions ul li {
+	margin: 5px 0;
+}
+
+
+#results_filter {
+	float: right;
+}
+
+/* With Search Results using Bootstrap Select */
+#refinedsearch ul li .bootstrap-select,
+#results_filter .bootstrap-select {
+	width: 170px;
+	display: inline-block;
+	float: right;
+}
+
+#results_filter .bootstrap-select {
+	float: none;
+}
+
+#refinedsearch ul li .bootstrap-select .filter-option {
+	font-size: 12px;
+	margin-top: 2px;
+}
+
+#refinedsearch ul li .bootstrap-select ul {
+	margin: 0;
+}
+
+#refinedsearch ul li .bootstrap-select ul li{
+	margin: 10px 0;
+}
+
+/* Search Results - Images */
+#Tiles_SearchResults {
+	margin-top: 20px;
+}
+
+#Tiles_SearchResults img{
+	width: 200px;
+	/* border: 1px solid #666666; */
+	margin: 5px;
+	padding: 1px;
+}
+
